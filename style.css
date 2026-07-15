@@ -1,223 +1,65 @@
-:root {
-  --honig: #d99a20;
-  --honig-hell: #f7d27a;
-  --braun: #4a2f18;
-  --gruen: #496b3a;
-  --creme: #fff8e8;
-  --weiss: #ffffff;
-  --text: #2a2118;
-}
-
 * {
   box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #242424;
+  background: #f3f0e7;
 }
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  background: var(--creme);
-  line-height: 1.6;
 }
 
-header {
-  background:
-    linear-gradient(135deg, rgba(74, 47, 24, 0.88), rgba(217, 154, 32, 0.78)),
-    url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80");
-  background-size: cover;
-  background-position: center;
-  color: var(--weiss);
-  min-height: 72vh;
+.page {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 8%;
-  background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(4px);
-}
-
-.logo {
-  font-size: 1.35rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  color: var(--weiss);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-.hero {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  padding: 3rem 8%;
-}
-
-.hero-box {
-  max-width: 720px;
-  background: rgba(0, 0, 0, 0.28);
+  justify-content: center;
   padding: 2rem;
-  border-radius: 24px;
 }
 
-.hero h1 {
-  font-size: clamp(2.4rem, 6vw, 4.8rem);
-  line-height: 1.05;
-  margin: 0 0 1rem;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  max-width: 620px;
-  margin-bottom: 1.6rem;
-}
-
-.button {
-  display: inline-block;
-  padding: 0.85rem 1.35rem;
-  border-radius: 999px;
-  background: var(--honig-hell);
-  color: var(--braun);
-  text-decoration: none;
-  font-weight: 700;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
-}
-
-.button:hover {
-  transform: translateY(-1px);
-}
-
-section {
-  padding: 4.5rem 8%;
-}
-
-.section-title {
-  color: var(--braun);
-  font-size: 2.1rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-.intro {
-  max-width: 900px;
-  font-size: 1.1rem;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.4rem;
-  margin-top: 2rem;
-}
-
-.card {
-  background: var(--weiss);
-  border-radius: 22px;
-  padding: 1.5rem;
-  box-shadow: 0 8px 24px rgba(74, 47, 24, 0.10);
-  border: 1px solid rgba(217, 154, 32, 0.25);
-}
-
-.card h3 {
-  margin-top: 0;
-  color: var(--gruen);
-  font-size: 1.3rem;
-}
-
-.highlight {
-  background: linear-gradient(135deg, #fff3c5, #ffffff);
-  border-top: 5px solid var(--honig);
-}
-
-.two-col {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 2rem;
-  align-items: center;
-}
-
-.image-panel {
-  min-height: 320px;
-  border-radius: 28px;
-  background:
-    url("https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=1000&q=80");
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 12px 30px rgba(74, 47, 24, 0.20);
-}
-
-.green-band {
-  background: var(--gruen);
-  color: var(--weiss);
-}
-
-.green-band .section-title {
-  color: var(--weiss);
-}
-
-.contact-box {
-  background: var(--weiss);
-  border-radius: 24px;
-  padding: 1.6rem;
-  color: var(--text);
+.content {
+  width: 100%;
   max-width: 720px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+  text-align: center;
 }
 
-.contact-box a {
-  color: var(--braun);
-  font-weight: 700;
+h1 {
+  margin: 0 0 2.5rem;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  font-weight: 500;
+}
+
+p {
+  margin: 0 auto 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.7;
 }
 
 footer {
-  background: var(--braun);
-  color: var(--weiss);
-  padding: 2rem 8%;
-  font-size: 0.92rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
 }
 
-footer a {
-  color: var(--honig-hell);
+a {
+  color: inherit;
+  text-decoration: underline;
 }
 
-@media (max-width: 760px) {
-  nav {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.8rem;
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 1.5rem;
   }
 
-  .nav-links {
-    gap: 0.8rem;
-  }
-
-  .two-col {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-box {
-    padding: 1.4rem;
+  p {
+    font-size: 1.05rem;
   }
 }
